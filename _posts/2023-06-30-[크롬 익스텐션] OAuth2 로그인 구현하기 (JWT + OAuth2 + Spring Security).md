@@ -24,7 +24,7 @@ OAuth2를 이용하여 로그인을 구현하는 서버 구조는 크게 3가지
 - 프론트에서 인증 과정 수행하는 과정 
 ➡️ 크롬 익스텐션 OAuth2 관련 라이브러리 : chorme.identity
 
-![Image Alt 텍스트](/assets/img/image.jpg)
+![Image Alt 텍스트](/assets/img/image.JPG)
 
 출처 : https://developer.chrome.com/docs/extensions/reference/identity/
 
