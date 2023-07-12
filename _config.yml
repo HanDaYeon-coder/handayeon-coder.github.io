@@ -20,7 +20,7 @@ timezone: Asia/Seoul
 
 title: 다나의 개발 일지 # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the sub-title
+tagline: 개발 기록지 # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   이유가 있는 선택과 개발을 하고 싶은 백엔드 개발자입니다.
