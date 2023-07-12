@@ -1,7 +1,7 @@
 ---
 title: "[크롬 익스텐션] OAuth2 로그인 구현하기 (JWT + OAuth2 + Spring Security)"
 date: 2023-06-30
-author: cotes
+author: 다나
 categories: [OAuth2, JWT, Chrome Extension]
 ---
 
