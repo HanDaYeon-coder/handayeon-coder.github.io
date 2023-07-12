@@ -24,7 +24,7 @@ OAuth2를 이용하여 로그인을 구현하는 서버 구조는 크게 3가지
 - 프론트에서 인증 과정 수행하는 과정 
 ➡️ 크롬 익스텐션 OAuth2 관련 라이브러리 : chorme.identity
 
-<img width="600" height="150" src="/assets/img/image.jpg">
+<img width="800" height="500" src="/assets/img/image.jpg">
 
 출처 : https://developer.chrome.com/docs/extensions/reference/identity/
 
@@ -65,7 +65,7 @@ OAuth2를 이용하여 로그인을 구현하는 서버 구조는 크게 3가지
 ➡️ React + JWT + OAuth2 + Spring Security
 ➡️ Chrome Extension(JavaScript) + JWT + OAuth2 + Spring Security
 
-<img width="800" height="500" src="/assets/img/image-3.png">
+<img width="600" height="200" src="/assets/img/image-3.png">
 
 
 ✨ 소셜 로그인 로직 정리를 위의 사진으로 총 정리하였습니다.
