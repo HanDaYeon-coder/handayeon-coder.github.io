@@ -1,6 +1,6 @@
 ---
 title: "[Spring Security] OAuth2 로그인 + JWT 구현하기"
-date: 2023-07-15
+date: 2023-07-14
 author: 다나
 categories: [OAuth2, JWT, Spring Security]
 ---
