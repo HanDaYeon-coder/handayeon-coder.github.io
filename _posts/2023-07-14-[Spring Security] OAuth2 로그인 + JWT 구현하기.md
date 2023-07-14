@@ -29,7 +29,7 @@ categories: [OAuth2, JWT, Spring Security]
 <br/>
 
 
-![](https://velog.velcdn.com/images/da_na/post/f7ea5da9-4c10-4560-9f44-238980b22997/image.png)
+![](/assets/img/securityfilterchain.png)
 
 이미지 출처 : https://docs.spring.io/spring-security/reference/servlet/architecture.html#servlet-securityfilterchain
 
