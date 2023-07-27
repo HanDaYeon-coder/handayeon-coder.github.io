@@ -8,10 +8,10 @@ categories: [Spring Security, OAuth2]
 
 OAuth를 사용하여 구글 로그인을 연동하고 있었습니다.
 
-기존에는 로컬(`http://localhost:8080/oauth2/authorization/google`)에서 오류가 발생하지 않아서 서버 개발 중에는 구글 로그인을 잘 사용할 수 있었습니다. 
+기존에는 로컬(http://localhost:8080/oauth2/authorization/google)에서 오류가 발생하지 않아서 서버 개발 중에는 구글 로그인을 잘 사용할 수 있었습니다. 
 
 🚨그러나, 서버 개발을 마치고 AWS EC2에 배포를 하고 나서,
-AWS EC2로 연결된 도메인 페이지(ex. `https://도메인 주소/oauth2/authorization/google`)에서 구글 로그인을 하려고 시도했을 때 아래와 같은 오류가 발생하였습니다.
+AWS EC2로 연결된 도메인 페이지(ex. https://도메인주소/oauth2/authorization/google)에서 구글 로그인을 하려고 시도했을 때 아래와 같은 오류가 발생하였습니다.
 
 ![](https://velog.velcdn.com/images/da_na/post/c49fefb2-b84f-4355-b856-4ef0fa50a36a/image.png)
 
@@ -58,11 +58,11 @@ google console에서 OAuth 설정 관련 부분에서 `https://도메인 주소/
 ![](https://velog.velcdn.com/images/da_na/post/a7184ce9-4402-4dad-a6b8-ef5ad10b5a32/image.png)
 사진 출처 : https://docs.spring.io/spring-security/site/docs/5.2.12.RELEASE/reference/html/oauth2.html
 
-현재 사용하고 있는 프로젝트의 EC2의 baseurl 자체가 http를 사용하고 있어서 `http://도메인 주소/login/oauth2/code/google`가 되어 있었습니다.
+현재 사용하고 있는 프로젝트의 EC2의 baseurl 자체가 http를 사용하고 있어서 http://도메인주소/login/oauth2/code/google가 되어 있었습니다.
 
 따라서 Spring security 코드에서 redirect_uri를 설정하는 코드를 security에서 제공해주는 형식이 아닌 새로운 redirect_uri를 직접 설정해주기로 하였습니다.
 
-Spring security를 설정해주는 yml 파일에서 `redirect-uri : https://{baseHost}{basePort}/login/oauth2/code/google`를 추가하여 직접 명시하여 코드를 변경한 뒤에 다시 EC2에 배포하였습니다!
+Spring security를 설정해주는 yml 파일에서 redirect-uri : https://{baseHost}{basePort}/login/oauth2/code/google를 추가하여 직접 명시하여 코드를 변경한 뒤에 다시 EC2에 배포하였습니다!
 
 <이전 코드>
 
