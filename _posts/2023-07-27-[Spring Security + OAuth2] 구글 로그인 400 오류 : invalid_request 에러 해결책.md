@@ -13,13 +13,13 @@ OAuth를 사용하여 구글 로그인을 연동하고 있었습니다.
 🚨그러나, 서버 개발을 마치고 AWS EC2에 배포를 하고 나서,
 AWS EC2로 연결된 도메인 페이지(ex. `https://도메인 주소/oauth2/authorization/google`)에서 구글 로그인을 하려고 시도했을 때 아래와 같은 오류가 발생하였습니다.
 
-<img src="https://velog.velcdn.com/images/da_na/post/c49fefb2-b84f-4355-b856-4ef0fa50a36a/image.png" width="500" height="600"/>
+![](https://velog.velcdn.com/images/da_na/post/c49fefb2-b84f-4355-b856-4ef0fa50a36a/image.png)
 
 이처럼 `400 오류: invalid_request`가 발생하였습니다!
 
 400번대의 오류는 클라이언트의 오류이기 때문에 해당 url을 호출하는 제 프로젝트 서버의 오류였습니다!
 
-<img src="https://velog.velcdn.com/images/da_na/post/5e9600ca-30c5-437b-b651-4bfbd8f5e1d3/image.png" width="600" height="250"/>
+![](https://velog.velcdn.com/images/da_na/post/5e9600ca-30c5-437b-b651-4bfbd8f5e1d3/image.png)
 
 사진 출처 : https://support.google.com/accounts/answer/12917337?hl=ko
 
@@ -34,7 +34,8 @@ AWS EC2로 연결된 도메인 페이지(ex. `https://도메인 주소/oauth2/au
 
 따라서 오류 세부정보를 보면서 파악하려고 했습니다!
 
-<img src="https://velog.velcdn.com/images/da_na/post/85b9873d-0e59-4e43-88f2-8b393c993413/image.png" width="400" height="100"/>
+![](https://velog.velcdn.com/images/da_na/post/85b9873d-0e59-4e43-88f2-8b393c993413/image.png)
+
 
 이때, 확인해보니까 redirect_uri가 https가 아니라 http임을 확인할 수 있었습니다.
 
@@ -92,4 +93,4 @@ spring:
 ```
 
 ✨ 아래의 사진처럼 성공적으로 도메인 페이지에서 구글 로그인을 할 수 있었습니다!!
-<img src="https://velog.velcdn.com/images/da_na/post/afea560f-d2ee-41d7-8047-fdcf44f67a0c/image.png" width="500" height="600"/>
+![](https://velog.velcdn.com/images/da_na/post/afea560f-d2ee-41d7-8047-fdcf44f67a0c/image.png)
