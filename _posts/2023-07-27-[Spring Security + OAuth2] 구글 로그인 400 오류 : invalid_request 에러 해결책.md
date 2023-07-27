@@ -1,8 +1,8 @@
 ---
- title: "[Spring Security + OAuth2] 구글 로그인 400 오류 : invalid_request 에러 해결책"
- date: 2023-07-27
- categories: [Spring Security, OAuth2]
- ---
+title: "[디자인 패턴] 04. Singleton 패턴"
+date: 2023-07-25
+categories: [Design Pattern, Singleton]
+---
 
  ### PART 1. 400 오류 invalid_request 에러 파악
 
