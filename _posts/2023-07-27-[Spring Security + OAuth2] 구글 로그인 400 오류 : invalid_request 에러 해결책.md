@@ -63,9 +63,9 @@ categories: [Spring Security, OAuth2]
 
  Spring security를 설정해주는 yml 파일에서 `redirect-uri : https://{baseHost}{basePort}/login/oauth2/code/google`를 추가하여 직접 명시하여 코드를 변경한 뒤에 다시 EC2에 배포하였습니다!
 
- - 이전 코드
+- 이전 코드
 
- ```yml
+```yml
  spring:
    security:
      oauth2:
@@ -75,10 +75,10 @@ categories: [Spring Security, OAuth2]
              client-id: {구글 콘솔에서 제공받은 구글 oauth 클라이언트 아이디}
              client-secret: {구글 콘솔에서 제공받은 구글 oauth 클라이언트 비밀번호}
              scope: profile,email
- ```
+```
 
- - 변경한 코드
- ```yml
+- 변경한 코드
+```yml
  spring:
    security:
      oauth2:
@@ -89,7 +89,7 @@ categories: [Spring Security, OAuth2]
              client-secret: {구글 콘솔에서 제공받은 구글 oauth 클라이언트 비밀번호}
              redirect-uri : https://{baseHost}{basePort}/login/oauth2/code/google
              scope: profile,email
- ```
+```
 
- ✨ 아래의 사진처럼 성공적으로 도메인 페이지에서 구글 로그인을 할 수 있었습니다!!
- <img src="https://velog.velcdn.com/images/da_na/post/afea560f-d2ee-41d7-8047-fdcf44f67a0c/image.png" width="500" height="600"/>
+✨ 아래의 사진처럼 성공적으로 도메인 페이지에서 구글 로그인을 할 수 있었습니다!!
+<img src="https://velog.velcdn.com/images/da_na/post/afea560f-d2ee-41d7-8047-fdcf44f67a0c/image.png" width="500" height="600"/>
