@@ -4,7 +4,7 @@ date: 2023-07-27
 categories: [Spring Security, OAuth2]
 ---
 
- ### PART 1. 400 오류 invalid_request 에러 파악
+### PART 1. 400 오류 invalid_request 에러 파악
 
  OAuth를 사용하여 구글 로그인을 연동하고 있었습니다.
 
@@ -44,7 +44,7 @@ categories: [Spring Security, OAuth2]
 
  ---
 
- ### PART 2. 오류 해결하기
+### PART 2. 오류 해결하기
 
  google console에서 OAuth 설정 관련 부분에서 `https://도메인 주소/login/oauth2/code/google`을 사용했는데 어디에도 선언하지 않은 `http://도메인 주소/login/oauth2/code/google`를 호출하고 있는지 알아야 했습니다.
 
