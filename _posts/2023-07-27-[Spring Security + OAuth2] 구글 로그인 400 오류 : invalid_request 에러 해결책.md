@@ -13,14 +13,13 @@ categories: [Spring Security, OAuth2]
  🚨그러나, 서버 개발을 마치고 AWS EC2에 배포를 하고 나서,
  AWS EC2로 연결된 도메인 페이지(ex. `https://도메인 주소/oauth2/authorization/google`)에서 구글 로그인을 하려고 시도했을 때 아래와 같은 오류가 발생하였습니다.
 
- <img src="https://velog.velcdn.com/images/da_na/post/c49fefb2-b84f-4355-b856-4ef0fa50a36a/image.png" width="500" height="600"/>
+![Alt text](/assets/img/2023-08-05-02/image-10.png)
 
  이처럼 `400 오류: invalid_request`가 발생하였습니다!
 
  400번대의 오류는 클라이언트의 오류이기 때문에 해당 url을 호출하는 제 프로젝트 서버의 오류였습니다!
 
- <img src="https://velog.velcdn.com/images/da_na/post/5e9600ca-30c5-437b-b651-4bfbd8f5e1d3/image.png" width="600" height="250"/>
-
+![Alt text](/assets/img/2023-08-05-02/image-11.png)
  사진 출처 : https://support.google.com/accounts/answer/12917337?hl=ko
 
  <br/>
@@ -34,7 +33,7 @@ categories: [Spring Security, OAuth2]
 
  따라서 오류 세부정보를 보면서 파악하려고 했습니다!
 
- <img src="https://velog.velcdn.com/images/da_na/post/85b9873d-0e59-4e43-88f2-8b393c993413/image.png" width="500" height="600"/>
+![Alt text](/assets/img/2023-08-05-02/image-12.png)
 
  이때, 확인해보니까 redirect_uri가 https가 아니라 http임을 확인할 수 있었습니다.
 
@@ -48,14 +47,14 @@ categories: [Spring Security, OAuth2]
 
  google console에서 OAuth 설정 관련 부분에서 `https://도메인 주소/login/oauth2/code/google`을 사용했는데 어디에도 선언하지 않은 `http://도메인 주소/login/oauth2/code/google`를 호출하고 있는지 알아야 했습니다.
 
- ![](https://velog.velcdn.com/images/da_na/post/1692d64a-8a7a-41eb-8301-b7d03d88f62d/image.png)
+![Alt text](/assets/img/2023-08-05-02/image-13.png)
 
  현재 프로젝트에서는 Spring security에서 구글 로그인을 연결하고 있기 때문에 Spring security 코드에서 redirect_uri를 설정하는 코드를 찾아보았습니다.
 
  하지만, redirect_uri를 설정하는 코드를 따로 설정하고 있지 않아도 Spring security 자체적으로 구현되어 있어서 `{baseurl}/login/oauth2/code/google`가 되어 있습니다. 
 
- ![](https://velog.velcdn.com/images/da_na/post/a7184ce9-4402-4dad-a6b8-ef5ad10b5a32/image.png)
- 사진 출처 : https://docs.spring.io/spring-security/site/docs/5.2.12.RELEASE/reference/html/oauth2.html
+![Alt text](/assets/img/2023-08-05-02/image-14.png) 
+사진 출처 : https://docs.spring.io/spring-security/site/docs/5.2.12.RELEASE/reference/html/oauth2.html
 
  현재 사용하고 있는 프로젝트의 EC2의 baseurl 자체가 http를 사용하고 있어서 `http://도메인 주소/login/oauth2/code/google`가 되어 있었습니다.
 
@@ -92,4 +91,4 @@ categories: [Spring Security, OAuth2]
 ```
 
 ✨ 아래의 사진처럼 성공적으로 도메인 페이지에서 구글 로그인을 할 수 있었습니다!!
-<img src="https://velog.velcdn.com/images/da_na/post/afea560f-d2ee-41d7-8047-fdcf44f67a0c/image.png" width="500" height="600"/>
+![Alt text](/assets/img/2023-08-05-02/image-15.png)

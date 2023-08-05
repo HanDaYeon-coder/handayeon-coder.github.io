@@ -33,7 +33,7 @@ categories: [OAuth2, JWT, Spring Security]
 
 이미지 출처 : https://docs.spring.io/spring-security/reference/servlet/architecture.html#servlet-securityfilterchain
 
-![](https://velog.velcdn.com/images/da_na/post/81c7f2b7-876a-436f-8c81-ad3338c88eb9/image.png)
+![Alt text](/assets/img/2023-08-05-02/image.png)
 
 이미지 출처 : https://youmekko.github.io/2018/04/26/2018-04-26-Filter/
 
@@ -105,7 +105,8 @@ public class SecurityConfig {
 - JwtAuthFilter는 제가 정의한 필터입니다! 이처럼 사용자가 정의한 필터를 추가할 수 있습니다!
 
   <br/>
-![](https://velog.velcdn.com/images/da_na/post/c874b3d1-a678-4cab-b9fd-63cdc5fd4354/image.png)
+
+![Alt text](/assets/img/2023-08-05-02/image-1.png)
 
 그림출처 : https://atin.tistory.com/590
 
@@ -311,7 +312,7 @@ Part1에서 FilterChain에 추가한 JwtAuthFilter를 직접 정의해보겠습�
 - 여기에서 중요한 점은 **SecurityContextHolder**에 인증된 회원의 정보를 저장해놓습니다.
 그리고 앞으로 서비스에서 authenticate된 principal에 접근하고 싶으면, SecurityContextHolder 에 접근하면 됩니다.
 
-![](https://velog.velcdn.com/images/da_na/post/57f47ecd-ffa1-4326-82a3-80f5690a2b6b/image.png)
+![Alt text](/assets/img/2023-08-05-02/image-2.png)
 
 ```java
 @RequiredArgsConstructor

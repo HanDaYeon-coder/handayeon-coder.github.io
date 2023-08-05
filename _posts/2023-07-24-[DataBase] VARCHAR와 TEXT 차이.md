@@ -13,11 +13,9 @@ categories: [DataBase]
 첫 번째 사진은 처음으로 만든 테이블이고, 두 번째 사진은 피드백을 받고 고친 테이블 사진입니다. 
 
 
-![](https://velog.velcdn.com/images/da_na/post/265795fd-53c0-4657-a8ff-0b5b886c06b8/image.png)
+![Alt text](/assets/img/2023-08-05-02/image-7.png)
 
-
-![](https://velog.velcdn.com/images/da_na/post/37cd3c1a-d3a3-4240-bba4-40b5be70de90/image.png)
-
+![Alt text](/assets/img/2023-08-05-02/image-8.png)
 
 이전까지는 VARCHAR와 TEXT의 차이는 단순하게 길이 차이와 명확하게 limit size를 정의할 수 있는지의 여부라고 생각했습니다!
 
