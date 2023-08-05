@@ -1,0 +1,3 @@
+user-agent: *
+Allow: /
+Sitemap: https://handayeon-coder.github.io/sitemap.xml
