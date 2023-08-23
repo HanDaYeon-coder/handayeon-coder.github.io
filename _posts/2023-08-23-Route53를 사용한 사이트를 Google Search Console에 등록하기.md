@@ -57,7 +57,8 @@ categories: [Route53, Google Search Console]
 <br/>
 
 #### 2. DNS 레코드를 통해, 도메인 소유권 확인하기
-    - 도메인 이름 제공 업체에 TXT 레코드를 dadamda.me의 DNS 설정에 복사해서 넣어줍니다.
+
+- 도메인 이름 제공 업체에 TXT 레코드를 dadamda.me의 DNS 설정에 복사해서 넣어줍니다.
     
     ![Alt text](/assets/img/2023-08-23/image-3.png)
 
