@@ -13,7 +13,7 @@ categories: [Route53, Google Search Console]
 
 그러면 `Google Search Console`은 무엇을 하는 곳일까요??
 
-말 그대로 구글 검색과 관련된 것들을 제공해줍니다.
+말 그대로 **구글 검색**과 관련된 것들을 제공해줍니다.
 
 새롭게 사이트 도메인 주소를 구매해서 구글 검색창에 검색해봐도 자신의 사이트와 관련된 정보가 나오지 않습니다. 
 
@@ -27,7 +27,7 @@ categories: [Route53, Google Search Console]
 
 ### PART 2. Google Search Console에 등록하기
 
-1. 먼저, Google Search Console 사이트에 들어가서, 원하는 사이트의 속성을 추가합니다.
+#### 1. 먼저, Google Search Console 사이트에 들어가서, 원하는 사이트의 속성을 추가합니다.
 
 - <a href="https://search.google.com/search-console/about">https://search.google.com/search-console/about</a>
 
@@ -35,7 +35,7 @@ categories: [Route53, Google Search Console]
 
     ![Alt text](/assets/img/2023-08-23/image-2.png)
 
-    속성 유형을 선택할 때에는 크게 도메인, URL  접두어로 나누어집니다.
+    속성 유형을 선택할 때에는 크게 **도메인**, **URL  접두어**로 나누어집니다.
     
     이때 새롭게 사이트 도메인 주소를 구매했다면, 도메인을 통해서 인증하는 게 좋습니다. 
     
@@ -50,11 +50,13 @@ categories: [Route53, Google Search Console]
     
     그러나, URL 접두사 속성을 사용하면, 제한된 속성을 생성할 수 있어서 여러 속성을 추가해줘야 합니다.
 
-    따라서 저는 도메인 속성을 추가해주도록 하겠습니다.
+    따라서 저는 **도메인 속성**을 추가해주도록 하겠습니다.
 
-    출처 : https://support.google.com/webmasters/answer/34592
+    출처 : <a href="https://support.google.com/webmasters/answer/34592"> https://support.google.com/webmasters/answer/34592 </a>
 
-2. DNS 레코드를 통해, 도메인 소유권 확인하기
+<br/>
+
+#### 2. DNS 레코드를 통해, 도메인 소유권 확인하기
     - 도메인 이름 제공 업체에 TXT 레코드를 dadamda.me의 DNS 설정에 복사해서 넣어줍니다.
     
     ![Alt text](/assets/img/2023-08-23/image-3.png)
@@ -78,16 +80,16 @@ categories: [Route53, Google Search Console]
 
 실패 문구에서 '도메인 이름 공급업체'에 주목해서, 도메인 이름 공급업체가 가비아가 아닐 수도 있다는 생각을 했습니다.
 
-이때, dadamda.me의 네임서버가 aws로 되어 있어서 가비아가 아닌 aws에서 도메인 관련된 Route53에 등록해야 함을 알게 되었습니다.
+이때, dadamda.me의 네임서버가 aws로 되어 있어서 가비아가 아닌 **aws에서 도메인 관련된 Route53**에 등록해야 함을 알게 되었습니다.
 
 
 참고 사이트 : <a href="https://delay100.tistory.com/m/32"> https://delay100.tistory.com/m/32 </a>
 
-1. aws > Route 53 > Hosted zones 페이지로 이동합니다.
+#### 1. aws > Route 53 > Hosted zones 페이지로 이동합니다.
 
 ![Alt text](/assets/img/2023-08-23/image-6.png)
 
-2. 등록하고 싶은 host(dadamda.me)를 선택하고, Create record를 클릭합니다.
+#### 2. 등록하고 싶은 host(dadamda.me)를 선택하고, Create record를 클릭합니다.
 
 ![Alt text](/assets/img/2023-08-23/image-8.png)
 
