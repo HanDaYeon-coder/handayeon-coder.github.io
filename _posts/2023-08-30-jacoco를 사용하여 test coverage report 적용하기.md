@@ -38,7 +38,7 @@ Jacoco는 `자바 코드 커버리지`를 확인하는 데에 사용되는 오�
 
 아래의 사진은 Jacoco로 생성된 xml 파일을 PR 커멘트로 남긴 예시입니다~
 
-![Alt text](image.png)
+![Alt text](/assets/img/2023-08-30/image.png)
 
 <br/>
 
@@ -104,7 +104,7 @@ build/reports/jacoco/test/jacocoTestReport.xml 경로에 파일이 생성됩니�
 
 ### 2. Jacoco-report 사용해서, 커버리지 리포트를 PR 코멘트로 생성하기
 
->> A Github action that publishes the JaCoCo report as a comment in the Pull Request with customizable pass percentage for modified modules, files and the overall project. You can view the coverage of just the changed files in your pull request.
+> A Github action that publishes the JaCoCo report as a comment in the Pull Request with customizable pass percentage for modified modules, files and the overall project. You can view the coverage of just the changed files in your pull request.
 
 출처 : https://github.com/Madrapps/jacoco-report
 
@@ -319,7 +319,7 @@ public forked repositories`이기 때문에 GITHUB_TOKEN의 권한은 모두 rea
 ![Alt text](/assets/img/2023-08-30/image-22.png)
 
 정상적으로 Test Coverage Report가 Pull Request 커멘트로 등록되는 모습을 확인할 수 있습니다~!
-![Alt text](image.png)
+![Alt text](/assets/img/2023-08-30/image.png)
 
 <br/>
 
