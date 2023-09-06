@@ -5,7 +5,7 @@ categories: [Seminar, Code Review]
 ---
 # 0️⃣ 서론
 
-감사하게도 2023년 8월 31일에 한빛 미디어에서 주최한 세미나에 초대받아서, 코드 리뷰 세미나를 들으러 가게 되었습니다.
+감사하게도 2023년 8월 31일에 한빛 미디어에서 주최한 세미나에 초대받아서, 코드 리뷰 세미나를 들으러 갔습니다.
 
 ![Alt text](/assets/img/2023-09-06/image.png)
 사진 출처 : <a href="https://festa.io/events/3819"> https://festa.io/events/3819 </a>
@@ -18,8 +18,7 @@ categories: [Seminar, Code Review]
 
 이루다 사진 출처 : <a href="https://team.luda.ai"> https://team.luda.ai </a>
 
-생생한 현장에서의 코드 리뷰 방법뿐만 아니라 '코드 리뷰를 받는 사람의 노력', 
-'코드 리뷰를 하는 사람의 노력'을 위주로 코드 리뷰의 필요성과 코드 리뷰를 하기 위해서 여러 사람들을 독려하는 방법까지 다 들어볼 수 있었습니다~!
+생생한 현장에서의 코드 리뷰 방법뿐만 아니라 '코드 리뷰를 받는 사람의 노력', '코드 리뷰를 하는 사람의 노력'을 위주로 코드 리뷰의 필요성과 코드 리뷰를 하기 위해서 여러 사람들을 독려하는 방법까지 다 들어볼 수 있었습니다~!
 
 ---
 
@@ -102,6 +101,7 @@ categories: [Seminar, Code Review]
 
 ### ✔️ Commit covention을 정하자
 > [지라이슈번호] 작업: 설명
+
 ```
 [JT-1] feat: 기능 추가
 [JT-1] fix: 버그 수정
@@ -116,14 +116,14 @@ categories: [Seminar, Code Review]
 커밋 메시지는 한글로 작성한다. (기술적인 영어 제외)
 예시) [JT-1] feat: add 로그인 기능 (X) [JT-1] feat: 로그인 기능 추가 (O)
 ```
+
 ![Alt text](/assets/img/2023-09-06/image-6.png)
 
 ### ✔️ CI 파이프 라인(Type Checker, Unit Test)
 
 ![Alt text](/assets/img/2023-09-06/image-5.png)
 
-위의 PR Test는 Unit 테스트를 실행한 모습입니다. 
-해당 방법은 아래의 블로그글 에서 자세허게 살펴볼 수 있습니다.
+위의 PR Test는 Unit 테스트를 실행한 모습입니다. 해당 방법은 아래의 블로그글 에서 자세하게 살펴볼 수 있습니다.
 - https://velog.io/@da_na/TestCode-jacoco를-사용하여-test-coverage-report-적용하기
 
 ### ✔️ Brach Protection Rule
