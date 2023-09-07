@@ -171,7 +171,7 @@ Sentry를 사용하면서 주의할 점에 대해서 이야기해보겠습니다
 
 사진 출처 : https://sentry.io/pricing/
 
-무료 개정은 Developer 계정입니다.
+무료 버전은 Developer 버전입니다.
 
 따라서, 제한된 모니터링 가능한 에러 개수, 1명만 사용 가능 등 여러 제한 사항이 있지만 무료로 사용할 수 있다는 가장 큰 메리트가 있어서 Developer 계정으로 진행하였습니다.
 
@@ -183,7 +183,7 @@ Sentry를 사용하면서 주의할 점에 대해서 이야기해보겠습니다
 
 따라서 설정으로 이동하면 Developer Plan임을 확인할 수 있습니다.
 
-다른 Team, Business 계정은 돈이 청구되는 만큼 현재 프로젝트에 알맞는 plan인지 확인해보는 것도 중요합니다!!
+다른 Team, Business 계정은 돈이 청구되는 만큼 현재 프로젝트에 알맞는 plan 버전인지 확인해보는 것도 중요합니다!!
 
 ### 2. local은 기록하지 않기
 
@@ -201,7 +201,7 @@ local에서는 Sentry를 사용하지 않고 dev, prod와 같이 실제 에러�
 
 <a href="https://github.com/getsentry/sentry-symfony/issues/38"> https://github.com/getsentry/sentry-symfony/issues/38 </a>
 
-### 2. 사용자의 실수도 기록해야 하는가?
+### 3. 사용자의 실수도 기록해야 하는가?
 - 현재 Validation Error를 수집하도록 하였습니다.
 - 그러나, Validation Error는 개발자의 실수가 아닌 사용자의 실수이기 때문에 에러 처리만 잘 되어 있다면 수집할 정도로 중요한 에러가 아닙니다.
 - 사용자의 실수를 수집한다면 에러가 계속 쌓여서 실제로 개발자가 수집해야 할 중요한 에러들을 관리하고 파악하는 것이 어렵습니다.
@@ -230,7 +230,7 @@ public class ControllerExceptionAdvice {
 
 ---
 
-#  3️⃣ 결론 
+#  4️⃣ 결론 
 ![Alt text](/assets/img/2023-09-08/image-15.jpg)
 
 - 이전의 Discord를 사용해서 에러를 관리할 때보다 Sentry를 도입하여 에러를 수집하고 관리하니까 훨씬 편리하다고 판단하였습니다.
