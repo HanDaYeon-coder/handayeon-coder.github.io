@@ -213,7 +213,7 @@ public class JwtExceptionFilter extends OncePerRequestFilter {
 
 ---
 
-## 3. 성공한 JWT 만료 처리 추가 벙법
+## 3. 성공한 JWT 만료 처리 추가 방법
 
 ### exceptionHandling().authenticationEntryPoint(new JwtAuthenticationEntryPoint())
 - filter에서 발생한 예외를 handling 할 수 있도록 추가해줍니다.
