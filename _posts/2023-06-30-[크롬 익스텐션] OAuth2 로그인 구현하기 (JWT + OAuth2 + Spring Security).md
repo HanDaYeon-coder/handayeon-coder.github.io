@@ -33,7 +33,7 @@ OAuth2를 이용하여 로그인을 구현하는 서버 구조는 크게 3가지
 ### 1가지 이유 : 크롬 익스텐션 OAuth2 관련 자료가 많지 않다. 🏷️
 - 작년 1월부터 크롬 익스텐션 관련 버전이 Manifest V2에서 V3로 변경하라는 공지가 나왔습니다. 현재는 크롬 익스텐션을 V3로만 개발해야 했으며, 이전에 개발된 크롬 익스텐션은 V2가 더 많았습니다. 따라서 관련 자료가 V2 위주로 되어 있어서, 구현 과정에서 에러가 많이 발생했습니다.
 
-<img width="600" height="150" src="/assets/img/image-2.png">
+<img width="600" height="150" alt="Alt text" src="/assets/img/image-2.png">
 
 출처 : https://developer.chrome.com/docs/extensions/mv3/intro/
 
@@ -65,7 +65,7 @@ OAuth2를 이용하여 로그인을 구현하는 서버 구조는 크게 3가지
 ➡️ React + JWT + OAuth2 + Spring Security
 ➡️ Chrome Extension(JavaScript) + JWT + OAuth2 + Spring Security
 
-<img width="600" height="200" src="/assets/img/image-3.png">
+<img width="600" height="200" alt="Alt text" src="/assets/img/image-3.png">
 
 
 ✨ 소셜 로그인 로직 정리를 위의 사진으로 총 정리하였습니다.
@@ -94,11 +94,11 @@ https://kauth.kakao.com/oauth/authorize
 
 4-5. 사용자는 아래의 사진과 같이 소셜 로그인하는 페이지(구글 계정으로 로그인하는 창)로 이동하게 되고, 소셜 계정으로 로그인을 완료합니다.
 
-<img src="/assets/img/image-4.png" width="600" height="700"/>
+<img alt="Alt text" src="/assets/img/image-4.png" width="600" height="700"/>
 
 6. Google API Server는 해당 클라이언트 ID의 리다렉션 URI에 인가코드(Authorization code)를 제공해줍니다.
 
-<img width="600" height="250" src="/assets/img/image-5.png">
+<img alt="Alt text" width="600" height="250" src="/assets/img/image-5.png">
 
 - 위의 사진은 구글 로그인 OAuth2.0 계정 생성시 입력한 리디렉션 URI입니다.
 7. 백엔드는 제공받은 인가코드를 사용하여 Access 토큰을 요청합니다.
